@@ -4,6 +4,7 @@ export const theme = {
     md: "10px",
     lg: "15px",
     xl: "20px",
+    xxl: "40px",
   },
   fontSizes: {
     sm: "18px",

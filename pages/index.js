@@ -1,10 +1,11 @@
+import MainHeader from "components/organisms/MainHeader/MainHeader";
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/organisms/Layout/Layout";
 
 export default function index() {
   return (
     <Layout>
-      <h1>Pogotowie Ósmoklasisty</h1>
+      <MainHeader />
     </Layout>
   );
 }
