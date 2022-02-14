@@ -6,6 +6,7 @@ import { Headline } from "components/atoms/Headline/Headline.styles";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph.styles";
 import { BigText } from "components/atoms/BigText/BigText.styles";
 import { Section } from "components/atoms/Section/Section.styles";
+import { Subheadline } from "components/atoms/Subheadline/Subheadline.styles";
 
 export default function index() {
   return (
@@ -32,6 +33,42 @@ export default function index() {
         <Section>
           <Headline>Zapisy rozpoczną się</Headline>
           <BigText>14 marca o 20:00</BigText>
+        </Section>
+        <Section>
+          <Headline>Dlaczego warto?</Headline>
+
+          <Section as="article">
+            <Subheadline>
+              Praca z zadaniami o charakterze egzaminacyjnym
+            </Subheadline>
+            <Paragraph>
+              Będziesz miał okazję pracować nad zadaniami egzaminacyjnymi pod
+              okiem doświadczonych nauczycieli, którzy od lat z powodzeniem
+              przygotowują do egzaminów zewnętrznych.
+            </Paragraph>
+          </Section>
+
+          <Section as="article">
+            <Subheadline>Nowi znajomi</Subheadline>
+            <Paragraph>
+              Będziesz miał możliwość poznania osób z innych szkół - swoich
+              rówieśników, którzy również przygotowują się do egzaminu
+              ósmoklasisty. Będziesz mógł się wymienić doświadczeniami, ale
+              również spotkać kogoś kto ma podobne zainteresowania jak Ty.
+            </Paragraph>
+          </Section>
+
+          <Section as="article">
+            <Subheadline>Systematyczność i rozwój</Subheadline>
+            <Paragraph>
+              Poza zajęciami stacjonarnymi będziesz miał dostęp tego mini
+              portalu - będziemy publikowali dodatkowe zadania, informacje,
+              które pomogą Ci zrozumieć omawiane zagadnienia. Będziemy również
+              starali się dostarczyć Ci ciekawe narzędzia, które wspomagają
+              samorozwój - aplikacje, linki do interesujących szkoleń czy
+              wykładów.
+            </Paragraph>
+          </Section>
         </Section>
       </Wrapper>
     </Layout>
