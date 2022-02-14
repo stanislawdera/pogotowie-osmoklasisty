@@ -7,7 +7,7 @@ export default function MainHeader() {
     <StyledMainHeader>
       <Wrapper>
         <h1>Pogotowie Ósmoklasisty</h1>
-        <p>Warsztaty przygotowujące do Egzaminu Ósmoklasisty</p>
+        <p>Warsztaty przygotowujące do Egzaminu&nbsp;Ósmoklasisty</p>
       </Wrapper>
     </StyledMainHeader>
   );
