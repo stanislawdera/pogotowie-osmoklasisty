@@ -11,6 +11,7 @@ export const theme = {
     md: "24px",
     lg: "36px",
     xl: "48px",
+    xxl: "96px",
   },
   media: {
     tablet: "@media (min-width: 728px)",

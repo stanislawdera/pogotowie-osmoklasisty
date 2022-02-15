@@ -11,11 +11,22 @@ export const StyledMainHeader = styled.header`
     color: white;
     font-weight: black;
     font-size: ${({ theme }) => theme.fontSizes.lg};
-    padding: 0 0 ${({ theme }) => theme.spacing.lg} 0;
+    padding-bottom: ${({ theme }) => theme.spacing.lg};
   }
 
   & p {
     font-weight: bold;
     color: white;
+  }
+
+  ${({ theme }) => theme.media.desktop} {
+    h1 {
+      font-size: ${({ theme }) => theme.fontSizes.xxl};
+      padding-bottom: ${({ theme }) => theme.spacing.xl};
+    }
+
+    p {
+      font-size: ${({ theme }) => theme.fontSizes.lg};
+    }
   }
 `;
