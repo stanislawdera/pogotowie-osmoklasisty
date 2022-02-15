@@ -7,6 +7,8 @@ import { Paragraph } from "components/atoms/Paragraph/Paragraph.styles";
 import { BigText } from "components/atoms/BigText/BigText.styles";
 import { Section } from "components/atoms/Section/Section.styles";
 import { Subheadline } from "components/atoms/Subheadline/Subheadline.styles";
+import { Card } from "components/atoms/Card/Card.styles";
+import CardLink from "components/organisms/CardLink/CardLink";
 
 export default function index() {
   return (
@@ -33,6 +35,12 @@ export default function index() {
         <Section>
           <Headline>Zapisy rozpoczną się</Headline>
           <BigText>14 marca o 20:00</BigText>
+          <Paragraph>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+            vero blanditiis quam sapiente eum, deleniti eaque! Libero nihil fuga
+            inventore quae repellendus! Animi corrupti expedita eos amet quia
+            commodi doloribus.
+          </Paragraph>
         </Section>
         <Section>
           <Headline>Dlaczego warto?</Headline>
@@ -69,6 +77,18 @@ export default function index() {
               wykładów.
             </Paragraph>
           </Section>
+        </Section>
+        <Section>
+          <Headline>Pytania?</Headline>
+          <CardLink
+            to="/faq"
+            title="Zobacz najczęściej zadawane pytania (FAQ)"
+          />
+          <CardLink to="tel:+48000000000" title="Zadzwoń do nas" />
+          <CardLink
+            to="mailto:kontakt@pogotowie8klasisty.pl"
+            title="Napisz maila"
+          />
         </Section>
       </Wrapper>
     </Layout>
