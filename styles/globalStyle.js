@@ -11,4 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
 `;

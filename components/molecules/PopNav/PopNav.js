@@ -1,6 +1,22 @@
+import { UnstyledLink } from "components/atoms/Card/Card.styles";
+import Link from "next/link";
 import React from "react";
-import { StyledPopNav } from "./PopNav.styles";
+import { PopNavItem, StyledPopNav } from "./PopNav.styles";
 
-export default function PopNav({ isOpen = false }) {
-  return <StyledPopNav isOpen={isOpen}></StyledPopNav>;
+export default function PopNav({ isOpen = false, items = [] }) {
+  return (
+    <StyledPopNav isOpen={isOpen}>
+      <ul>
+        {items.map((item) => {
+          return (
+            <PopNavItem key={item.url}>
+              <Link href={item.url} passHref>
+                <UnstyledLink>{item.name}</UnstyledLink>
+              </Link>
+            </PopNavItem>
+          );
+        })}
+      </ul>
+    </StyledPopNav>
+  );
 }
