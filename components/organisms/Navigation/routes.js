@@ -22,6 +22,7 @@ const routes = [
   {
     name: "Portal Ósmoklasisty",
     url: "/portal-osmoklasisty",
+    style: "button",
   },
 ];
 

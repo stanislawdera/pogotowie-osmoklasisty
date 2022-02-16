@@ -18,6 +18,10 @@ export const StyledPopNav = styled.nav`
     list-style: none;
     text-align: center;
   }
+
+  ${({ theme }) => theme.media.desktop} {
+    display: none;
+  }
 `;
 
 export const PopNavItem = styled.li`

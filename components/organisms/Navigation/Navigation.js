@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Navbar } from "components/atoms/Navbar/Navbar.styles";
 import MenuButton from "components/atoms/MenuButton/MenuButton";
 import PopNav from "components/molecules/PopNav/PopNav";
 import routes from "./routes";
+import { NavWrapper } from "components/atoms/NavWrapper/NavWrapper.styles";
+import Navbar from "components/molecules/Navbar/Navbar";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +14,13 @@ export default function Navigation() {
   };
 
   return (
-    <Navbar>
+    <NavWrapper>
+      {/* For desktop */}
+      <Navbar items={routes} />
+
+      {/* For mobile screens */}
       <MenuButton isOpen={isMenuOpen} onClick={toggleMenu} />
       <PopNav isOpen={isMenuOpen} items={routes} />
-    </Navbar>
+    </NavWrapper>
   );
 }

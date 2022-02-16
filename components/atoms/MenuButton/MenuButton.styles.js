@@ -38,4 +38,9 @@ export const StyledMenuButton = styled.button`
       }
     }
   }
+
+  // don't show menu button on desktop
+  ${({ theme }) => theme.media.desktop} {
+    display: none;
+  }
 `;
