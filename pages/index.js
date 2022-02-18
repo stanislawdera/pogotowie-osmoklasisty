@@ -4,17 +4,24 @@ import React from "react";
 import Layout from "../components/organisms/Layout/Layout";
 import { Headline } from "components/atoms/Headline/Headline.styles";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph.styles";
-import { BigText } from "components/atoms/BigText/BigText.styles";
 import { Section } from "components/atoms/Section/Section.styles";
 import { Subheadline } from "components/atoms/Subheadline/Subheadline.styles";
 import { Card } from "components/atoms/Card/Card.styles";
 import CardLink from "components/organisms/CardLink/CardLink";
+import Countdown from "react-countdown";
+import CountdownRenderer from "components/organisms/CountdownRenderer/CountdownRenderer";
 
 export default function index() {
   return (
     <Layout>
       <MainHeader />
       <Wrapper>
+        <Section>
+          <Countdown
+            date={new Date(2022, 3, 14, 20)}
+            renderer={CountdownRenderer}
+          />
+        </Section>
         <Section as="article">
           <Headline>O co chodzi?</Headline>
           <Paragraph>
@@ -33,8 +40,7 @@ export default function index() {
           </Paragraph>
         </Section>
         <Section>
-          <Headline>Zapisy rozpoczną się</Headline>
-          <BigText>14 marca o 20:00</BigText>
+          <Headline>Jak się zapisać?</Headline>
           <Paragraph>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
             vero blanditiis quam sapiente eum, deleniti eaque! Libero nihil fuga
