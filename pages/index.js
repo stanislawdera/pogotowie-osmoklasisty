@@ -13,7 +13,7 @@ import CountdownRenderer from "components/organisms/CountdownRenderer/CountdownR
 
 export default function index() {
   return (
-    <Layout>
+    <Layout noHeader>
       <MainHeader />
       <Wrapper>
         <Section>

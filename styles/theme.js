@@ -7,6 +7,7 @@ export const theme = {
     xxl: "40px",
   },
   fontSizes: {
+    xs: "16px",
     sm: "18px",
     md: "24px",
     lg: "36px",
