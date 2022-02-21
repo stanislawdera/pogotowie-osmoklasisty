@@ -7,14 +7,14 @@ export const Button = styled.button`
   border-radius: 3px;
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
   :hover {
     opacity: 0.9;
   }
 
   :disabled {
-    opacity: 0.3;
+    background-color: #b3b3b3;
     cursor: not-allowed;
   }
 `;

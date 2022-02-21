@@ -128,7 +128,9 @@ export default function ZapiszSie() {
 
           <Row>
             <Col width="100%">
-              <Button type="submit">Prześlij formularz</Button>
+              <Button type="submit" disabled={!isValid && "disabled"}>
+                Prześlij formularz
+              </Button>
             </Col>
           </Row>
         </form>
