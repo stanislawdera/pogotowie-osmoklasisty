@@ -27,6 +27,7 @@ export default async function doSignUp(
   } else {
     // success
     setLoading(false);
+    console.log(responseData);
     whenDone();
   }
 }
