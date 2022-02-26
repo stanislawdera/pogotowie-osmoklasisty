@@ -15,6 +15,8 @@ export default async function doSignUp(
     body: JSON.stringify(data),
   });
 
+  console.log(JSON.stringify(data));
+
   const contentType = response.headers.get("content-type");
   const isResponseJSON =
     contentType && contentType.indexOf("application/json") !== -1;
