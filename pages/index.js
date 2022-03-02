@@ -10,6 +10,7 @@ import CardLink from "components/organisms/CardLink/CardLink";
 import Countdown from "react-countdown";
 import CountdownRenderer from "components/organisms/CountdownRenderer/CountdownRenderer";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function index() {
   return (
@@ -74,7 +75,10 @@ export default function index() {
           <Headline>Jak się zapisać?</Headline>
           <Paragraph>
             Zapisy rozpoczną się <b>14 marca o godzinie 20:00</b> tylko i
-            wyłącznie na stronie www.pogotowie8klasisty.pl.
+            wyłącznie na stronie&nbsp;
+            <Link href="https://www.pogotowie8klasisty.pl">
+              pogotowie8klasisty.pl
+            </Link>
           </Paragraph>
           <Paragraph>Liczba miejsc: 60</Paragraph>
         </Section>
