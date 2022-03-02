@@ -29,7 +29,10 @@ export default function index() {
           property="og:description"
           content="Bezpłatne zajęcia dla ósmoklasistów"
         />
-        <meta property="og:image" content="/images/og-image.jpg" />
+        <meta
+          property="og:image"
+          content="https://firebasestorage.googleapis.com/v0/b/testpogotowia.appspot.com/o/og-image.jpg?alt=media&token=c60e28a3-53b1-4989-8074-f866852d8746"
+        />
       </Head>
       <MainHeader />
       <Wrapper>
