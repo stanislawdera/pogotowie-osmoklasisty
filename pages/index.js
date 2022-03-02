@@ -6,47 +6,74 @@ import { Headline } from "components/atoms/Headline/Headline.styles";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph.styles";
 import { Section } from "components/atoms/Section/Section.styles";
 import { Subheadline } from "components/atoms/Subheadline/Subheadline.styles";
-import { Card } from "components/atoms/Card/Card.styles";
 import CardLink from "components/organisms/CardLink/CardLink";
 import Countdown from "react-countdown";
 import CountdownRenderer from "components/organisms/CountdownRenderer/CountdownRenderer";
+import Head from "next/head";
 
 export default function index() {
   return (
     <Layout noHeader>
+      <Head>
+        <title>
+          Pogotowie Ósmoklasisty - bezpłatne zajęcia przygotowujące do Egzaminu
+          Ósmoklasisty
+        </title>
+        <meta
+          name="description"
+          content="Pogotowie Egzaminacyjne Ósmoklasisty to 8 tygodniowy cykl spotkań obejmujący wszystkie przedmioty, z którymi zmierzą się ósmoklasiści (język polski, matematyka, język angielski). Projekt realizowany przez
+          nauczycieli i uczniów Zespołu Szkół SRKAK."
+        />
+        <meta property="og:title" content="Pogotowie Ósmoklasisty" />
+        <meta
+          property="og:description"
+          content="Bezpłatne zajęcia dla ósmoklasistów"
+        />
+        <meta property="og:image" content="/images/og-image.jpg" />
+      </Head>
       <MainHeader />
       <Wrapper>
         <Section>
           <Countdown
-            date={new Date(2022, 3, 14, 20)}
+            date={new Date(2022, 2, 14, 20)}
             renderer={CountdownRenderer}
           />
         </Section>
         <Section as="article">
           <Headline>O co chodzi?</Headline>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-            corrupti explicabo in repudiandae earum veniam beatae minus cum
-            commodi facilis aperiam ab eos tempore, maxime officia itaque
-            laboriosam dicta quaerat impedit ad ratione! Natus eius accusantium
-            fugit nobis dolores consequuntur commodi voluptatibus eveniet optio
-            magni! Repellat laborum quos ducimus laboriosam cupiditate officiis
-            ut in. Aliquid praesentium vel eos nemo aperiam voluptatem sed fuga
-            voluptatum tempore voluptates. Ipsum unde quia est, dicta voluptatem
-            magni consequuntur rem, repellendus ratione obcaecati autem saepe
-            accusamus harum assumenda distinctio repellat ipsam et asperiores
-            voluptatibus eveniet esse facilis. Blanditiis vel accusamus sequi,
-            cum minima saepe molestias.
+            Pogotowie Egzaminacyjne Ósmoklasisty to projekt realizowany przez
+            nauczycieli i uczniów Zespołu Szkół SRKAK (popularnego Katolika) z
+            Chorzowa.
+          </Paragraph>
+          <Paragraph>
+            Jest to 8 tygodniowy cykl spotkań obejmujący wszystkie przedmioty, z
+            którymi zmierzą się ósmoklasiści (język polski, matematyka, język
+            angielski). W każdym tygodniu odbędzie się zajęcia właśnie z tych
+            przedmiotów.
+          </Paragraph>
+          <Paragraph>
+            Spotkania będą odbywały się głównie we wtorki (od 29 marca) w
+            godzinach od 16:30 do 19:30 (po 45 minut na każdy przedmiot).
+          </Paragraph>
+          <Paragraph>
+            Nie są to ani korepetycje, ani lekcje wyrównawcze. Są to zajęcia, na
+            których doświadczeni nauczyciele (egzaminatorzy) skupiają się na
+            specyfice egzaminu ze swojego przedmiotu, omawiają typy zadań, które
+            co roku sprawiają najwięcej problemów oraz uczą odpowiednich
+            strategii egzaminacyjnych.
+          </Paragraph>
+          <Paragraph>
+            Projekt jest całkowicie darmowy dla wszystkich uczestników.
           </Paragraph>
         </Section>
         <Section>
           <Headline>Jak się zapisać?</Headline>
           <Paragraph>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-            vero blanditiis quam sapiente eum, deleniti eaque! Libero nihil fuga
-            inventore quae repellendus! Animi corrupti expedita eos amet quia
-            commodi doloribus.
+            Zapisy rozpoczną się <b>14 marca o godzinie 20:00</b> tylko i
+            wyłącznie na stronie www.pogotowie8klasisty.pl.
           </Paragraph>
+          <Paragraph>Liczba miejsc: 60</Paragraph>
         </Section>
         <Section>
           <Headline>Dlaczego warto?</Headline>
@@ -75,25 +102,24 @@ export default function index() {
           <Section as="article">
             <Subheadline>Systematyczność i rozwój</Subheadline>
             <Paragraph>
-              Poza zajęciami stacjonarnymi będziesz miał dostęp tego mini
-              portalu - będziemy publikowali dodatkowe zadania, informacje,
-              które pomogą Ci zrozumieć omawiane zagadnienia. Będziemy również
-              starali się dostarczyć Ci ciekawe narzędzia, które wspomagają
-              samorozwój - aplikacje, linki do interesujących szkoleń czy
-              wykładów.
+              Poza zajęciami stacjonarnymi będziesz Poza zajęciami stacjonarnymi
+              będziesz miał dostęp tego mini portalu - będziemy publikowali
+              dodatkowe zadania, informacje, które pomogą Ci zrozumieć omawiane
+              zagadnienia. Będziemy również starali się dostarczyć Ci ciekawe
+              narzędzia, które wspomagają samorozwój - aplikacje, linki do
+              interesujących szkoleń czy wykładów.
             </Paragraph>
           </Section>
         </Section>
         <Section>
           <Headline>Pytania?</Headline>
           <CardLink
-            to="/faq"
-            title="Zobacz najczęściej zadawane pytania (FAQ)"
+            to="https://www.facebook.com/KatolikChorzowLiceum"
+            title="Strona chorzowskiego Katolika na Facebooku"
           />
-          <CardLink to="tel:+48000000000" title="Zadzwoń do nas" />
           <CardLink
             to="mailto:kontakt@pogotowie8klasisty.pl"
-            title="Napisz maila"
+            title="Napisz maila na kontakt@pogotowie8klasisty.pl"
           />
         </Section>
       </Wrapper>
