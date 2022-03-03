@@ -17,18 +17,16 @@ export default function index() {
     <Layout noHeader>
       <Head>
         <title>
-          Pogotowie Ósmoklasisty - bezpłatne zajęcia przygotowujące do Egzaminu
-          Ósmoklasisty
+          Pogotowie Ósmoklasisty - bezpłatne warsztaty dla ósmoklasistów
         </title>
         <meta
           name="description"
-          content="Pogotowie Egzaminacyjne Ósmoklasisty to 8 tygodniowy cykl spotkań obejmujący wszystkie przedmioty, z którymi zmierzą się ósmoklasiści (język polski, matematyka, język angielski). Projekt realizowany przez
-          nauczycieli i uczniów Zespołu Szkół SRKAK."
+          content="Pogotowie Egzaminacyjne Ósmoklasisty to 8 tygodniowy cykl spotkań obejmujący wszystkie przedmioty, z którymi zmierzą się ósmoklasiści (język polski, matematyka, język angielski)"
         />
         <meta property="og:title" content="Pogotowie Ósmoklasisty" />
         <meta
           property="og:description"
-          content="Bezpłatne zajęcia dla ósmoklasistów"
+          content="Bezpłatne zajęcia dla ósmoklasistów. Zapisy od 14 marca od 20:00"
         />
         <meta
           property="og:image"
