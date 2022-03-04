@@ -11,6 +11,8 @@ import { useForm } from "react-hook-form";
 import doSignUp from "utils/doSignUp";
 import useYupValidationResolver from "utils/useYupValidationResolver";
 import validationSchema from "utils/signUpFormValidationSchema";
+import { Alert } from "components/atoms/Alert/Alert.styles";
+import { getErrorText } from "utils/getErrorText";
 
 export default function ZapiszSie() {
   const resolver = useYupValidationResolver(validationSchema);
@@ -30,6 +32,7 @@ export default function ZapiszSie() {
   return (
     <Layout title="Zapisz się!">
       <Wrapper>
+        {error && <Alert role="alert">{getErrorText(error)}</Alert>}
         <form onSubmit={handleSubmit(onSubmit)}>
           <Row>
             <Col width="100%">
@@ -109,8 +112,11 @@ export default function ZapiszSie() {
 
           <Row>
             <Col width="100%">
-              <Button type="submit" disabled={!isValid && "disabled"}>
-                Prześlij formularz
+              <Button
+                type="submit"
+                disabled={!isValid || (loading && "disabled")}
+              >
+                {loading ? "Proszę czekać..." : "Prześlij formularz"}
               </Button>
             </Col>
           </Row>

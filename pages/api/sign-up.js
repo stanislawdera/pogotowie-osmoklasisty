@@ -1,5 +1,5 @@
 import validationSchema from "utils/signUpFormValidationSchema";
-import { firestore, db } from "utils/firebaseAdmin";
+import { firestore } from "utils/firebaseAdmin";
 
 const validate = async (data) => {
   try {
@@ -15,17 +15,33 @@ export default async function handler(req, res) {
   const isValid = await validate(req.body);
   if (!isValid) res.status(400).json({ error: "form-invalid" });
   else {
-    const counterRef = db.ref("counter");
-    const count = await (await counterRef.get()).val();
+    const counterRef = firestore.collection("helpers").doc("counter");
+    const participantRef = firestore.collection("participants").doc();
 
-    if (count < process.env.LIMIT_OF_PLACES) {
-      await firestore
-        .collection("participants")
-        .add({ ...req.body, count: count });
-      await counterRef.set(count + 1);
+    try {
+      const tRes = await firestore.runTransaction(async (t) => {
+        const counter = await t.get(counterRef);
+        const placesCounter = counter.data().places;
+
+        if (placesCounter < process.env.LIMIT_OF_PLACES) {
+          await t.update(counterRef, { places: placesCounter + 1 });
+          await t.create(participantRef, req.body);
+          return;
+        } else {
+          throw "no-places";
+        }
+      });
+
+      // success
       res.status(201).send();
-    } else {
-      res.status(423).json({ error: "places-limit-exceeded" });
+    } catch (e) {
+      if (e == "no-places") {
+        // no more places
+        res.status(423).json({ error: e });
+      } else {
+        // other error
+        res.status(500).send();
+      }
     }
   }
 }
