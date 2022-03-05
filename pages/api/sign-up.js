@@ -17,6 +17,7 @@ export default async function handler(req, res) {
   else {
     const counterRef = firestore.collection("helpers").doc("counter");
     const participantRef = firestore.collection("participants").doc();
+    const mailsCollection = firestore.collection("mails");
 
     try {
       const tRes = await firestore.runTransaction(async (t) => {
@@ -26,6 +27,30 @@ export default async function handler(req, res) {
         if (placesCounter < process.env.LIMIT_OF_PLACES) {
           await t.update(counterRef, { places: placesCounter + 1 });
           await t.create(participantRef, req.body);
+
+          // participant email
+          await t.create(mailsCollection.doc(), {
+            to: req.body.email,
+            template: {
+              name: "participant-welcome",
+              data: {
+                firstName: req.body.firstName,
+              },
+            },
+          });
+
+          // parent email
+          await t.create(mailsCollection.doc(), {
+            to: req.body.parentEmail,
+            template: {
+              name: "parent-welcome",
+              data: {
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+              },
+            },
+          });
+
           return;
         } else {
           throw "no-places";
