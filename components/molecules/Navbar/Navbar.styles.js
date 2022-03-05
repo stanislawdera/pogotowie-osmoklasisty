@@ -31,5 +31,6 @@ export const NavbarButton = styled(NavbarItem)`
   padding: ${({ theme }) => theme.spacing.md};
   background-color: white;
   color: black;
+  opacity: 0.8;
   border-radius: 5px;
 `;
