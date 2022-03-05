@@ -9,6 +9,7 @@ export const StyledPopNav = styled.nav`
   background-color: white;
   transition: transform 0.3s ease-in-out;
   transform: translateX(${({ isOpen }) => (isOpen ? "0" : "-100%")});
+  z-index: 3;
 
   display: flex;
   align-items: center;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { PopNavItem, StyledPopNav } from "./PopNav.styles";
 
-export default function PopNav({ isOpen = false, items = [] }) {
+export default function PopNav({ isOpen = false, onItemClick, items = [] }) {
   return (
     <StyledPopNav isOpen={isOpen}>
       <ul>
@@ -11,7 +11,7 @@ export default function PopNav({ isOpen = false, items = [] }) {
           return (
             <PopNavItem key={item.url}>
               <Link href={item.url} passHref>
-                <UnstyledLink>{item.name}</UnstyledLink>
+                <UnstyledLink onClick={onItemClick}>{item.name}</UnstyledLink>
               </Link>
             </PopNavItem>
           );
