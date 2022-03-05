@@ -32,7 +32,7 @@ export default function Faq() {
           </Subheadline>
           <Paragraph>
             Najlepiej skontaktować się drogą elektroniczną wysyłając wiadomość
-            na adres e-mail <strong>kontakt@pogotowie8klasisty.pl</strong>.
+            na adres e-mail <strong>kontakt@pogotowie8klasisty.pl</strong>
           </Paragraph>
         </Card>
 
