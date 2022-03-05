@@ -45,7 +45,7 @@ export default function Harmonogram() {
           </tr>
           <tr>
             <td>16, 17, 18 kwietnia 2022 r.</td>
-            <td>Wielkonoc (sobota, niedziela, poniedziłek)</td>
+            <td>Wielkonoc (sobota, niedziela, poniedziałek)</td>
           </tr>
           <tr>
             <td>20 kwietnia 2022 r.</td>
