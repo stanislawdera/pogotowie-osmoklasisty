@@ -7,6 +7,7 @@ import { Subheadline } from "components/atoms/Subheadline/Subheadline.styles";
 import { VideoContainer } from "components/atoms/VideoContainer/VideoContainer.styles";
 import { Wrapper } from "components/atoms/Wrapper/Wrapper.styles";
 import Layout from "components/organisms/Layout/Layout";
+import Head from "next/head";
 import React from "react";
 
 export default function PortalOsmoklasisty() {
@@ -15,6 +16,15 @@ export default function PortalOsmoklasisty() {
       title="Portal Ósmoklasisty"
       content="Specjalna strona dla uczestników kursu"
     >
+      <Head>
+        <title>Portal Ósmoklasisty</title>
+        <meta
+          name="description"
+          content="Dla uczestników kursu została przygotowana specjalna aplikacja
+          internetowa, która pozwoli na powtórzenie zagadnień omawianych podczas
+          zajęć stacjonarnych."
+        />
+      </Head>
       <Wrapper>
         <Headline>O co chodzi?</Headline>
         <Paragraph>
