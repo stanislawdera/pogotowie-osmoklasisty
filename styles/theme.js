@@ -21,5 +21,7 @@ export const theme = {
   colors: {
     primary: "#833AB4",
     light: "#DFCEEC",
+    error: "#ff5252",
+    errorLight: "#ffe9e9",
   },
 };

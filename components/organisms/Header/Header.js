@@ -3,9 +3,9 @@ import React from "react";
 import Navigation from "../Navigation/Navigation";
 import { StyledHeader } from "./Header.styles";
 
-export default function Header({ title, content }) {
+export default function Header({ title, content, variant }) {
   return (
-    <StyledHeader>
+    <StyledHeader variant={variant}>
       <Wrapper>
         <Navigation />
         <h1>{title}</h1>
