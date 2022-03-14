@@ -13,6 +13,7 @@ import useYupValidationResolver from "utils/useYupValidationResolver";
 import validationSchema from "utils/signUpFormValidationSchema";
 import { Alert } from "components/atoms/Alert/Alert.styles";
 import { getErrorText } from "utils/getErrorText";
+import Link from "next/link";
 
 export default function ZapiszSie() {
   const resolver = useYupValidationResolver(validationSchema);
@@ -26,6 +27,10 @@ export default function ZapiszSie() {
   const whenDone = () => router.push("/thank-you");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
+  // checkboxes
+  const [checkboxOne, setCheckboxOne] = useState(false);
+  const [checkboxTwo, setCheckboxTwo] = useState(false);
 
   const onSubmit = (data) => doSignUp(data, setLoading, setError, whenDone);
 
@@ -112,9 +117,48 @@ export default function ZapiszSie() {
 
           <Row>
             <Col width="100%">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={checkboxOne}
+                  onChange={() => setCheckboxOne(!checkboxOne)}
+                />{" "}
+                Zapoznałam/zapoznałem się{" "}
+                <Link href="https://firebasestorage.googleapis.com/v0/b/testpogotowia.appspot.com/o/terms_2022%2FREGULAMIN%20PROJEKTU%20Pogotowie8klasisty.pdf?alt=media&token=71a6755b-be20-46c9-ba34-bd287d3fb95f">
+                  Regulaminem Pogotowia Egzaminacyjnego
+                </Link>{" "}
+                (wymagane)
+              </label>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col width="100%">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={checkboxTwo}
+                  onChange={() => setCheckboxTwo(!checkboxTwo)}
+                />{" "}
+                Zapoznałam/ zapoznałem się z{" "}
+                <Link href="https://firebasestorage.googleapis.com/v0/b/testpogotowia.appspot.com/o/terms_2022%2FKlauzula_Informacyjna_PogotowieEgzaminacyjne.pdf?alt=media&token=d52e8559-f50b-4962-bf8f-06b9d9c46c1e">
+                  Klauzulą Informacyjną dotyczącą danych osobowych
+                </Link>{" "}
+                Pogotowia Egzaminacyjnego (wymagane)
+              </label>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col width="100%">
               <Button
                 type="submit"
-                disabled={!isValid || (loading && "disabled")}
+                disabled={
+                  !isValid ||
+                  checkboxOne == false ||
+                  checkboxTwo == false ||
+                  (loading && "disabled")
+                }
               >
                 {loading ? "Proszę czekać..." : "Prześlij formularz"}
               </Button>
