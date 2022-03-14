@@ -4,6 +4,8 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   border: none;
+  display: inline-block;
+  text-decoration: none;
   border-radius: 3px;
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
   cursor: pointer;
