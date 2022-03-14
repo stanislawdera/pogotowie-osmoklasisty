@@ -9,11 +9,14 @@ export default function Layout({
   title = "",
   content = "",
   noHeader = false,
+  variant = "default",
 }) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {!noHeader && <Header title={title} content={content} />}
+      {!noHeader && (
+        <Header title={title} content={content} variant={variant} />
+      )}
       {children}
     </ThemeProvider>
   );
