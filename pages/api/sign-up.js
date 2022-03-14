@@ -18,6 +18,7 @@ export default async function handler(req, res) {
     const counterRef = firestore.collection("helpers").doc("counter");
     const participantRef = firestore.collection("participants").doc();
     const mailsCollection = firestore.collection("mails");
+    const standbyCollection = firestore.collection("standby");
 
     try {
       const tRes = await firestore.runTransaction(async (t) => {
@@ -53,20 +54,19 @@ export default async function handler(req, res) {
 
           return;
         } else {
-          throw "no-places";
+          await t.create(standbyCollection.doc(), {
+            ...req.body,
+            time: Date.now(),
+          });
+          res.status(423).json({ error: "no-places" });
+          return;
         }
       });
 
       // success
       res.status(201).send();
     } catch (e) {
-      if (e == "no-places") {
-        // no more places
-        res.status(423).json({ error: e });
-      } else {
-        // other error
-        res.status(500).send();
-      }
+      res.status(500).send();
     }
   }
 }

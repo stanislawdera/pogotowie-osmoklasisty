@@ -1,7 +1,7 @@
 export const getErrorText = (code) => {
   switch (code) {
     case "no-places":
-      return "Limit miejsc został wyczerpany. Jeżeli zwolnią się jakieś miejsca, poinformujemy o tym na tej stronie";
+      return "Limit miejsc został wyczerpany. Zapisaliśmy Cię na liście rezerwowej. Jeżeli zwolnią się jakieś miejsca, skontaktujemy się z Tobą drogą mailową. Nie należy przesyłać tego formularza ponownie.";
 
     case "form-invalid":
       return "Proszę sprawdzić poprawność podanych danych";
