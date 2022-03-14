@@ -20,7 +20,7 @@ export default function Navigation() {
 
       {/* For mobile screens */}
       <MenuButton isOpen={isMenuOpen} onClick={toggleMenu} />
-      <PopNav isOpen={isMenuOpen} items={routes} />
+      <PopNav isOpen={isMenuOpen} items={routes} onItemClick={toggleMenu} />
     </NavWrapper>
   );
 }

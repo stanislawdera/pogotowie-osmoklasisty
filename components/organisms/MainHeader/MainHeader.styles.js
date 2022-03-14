@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledMainHeader = styled.header`
   display: block;
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.primary};
   background-image: url("/images/pattern.png");
   padding: ${({ theme }) => theme.spacing.xxl} 0;
   line-height: 1;

@@ -5,4 +5,7 @@ module.exports = {
     LIMIT_OF_PLACES: process.env.LIMIT_OF_PLACES,
     FIREBASE_DATABASE_URL: process.env.FIREBASE_DATABASE_URL,
   },
-};
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+}

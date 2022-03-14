@@ -4,10 +4,6 @@ const routes = [
     url: "/",
   },
   {
-    name: "O Pogotowiu",
-    url: "/o-pogotowiu",
-  },
-  {
     name: "FAQ",
     url: "/faq",
   },
