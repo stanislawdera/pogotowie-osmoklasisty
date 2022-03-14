@@ -37,7 +37,7 @@ export default function index() {
       <Wrapper>
         <Section>
           <Countdown
-            date={new Date(2022, 2, 14, 16, 45)}
+            date={new Date(2022, 2, 14, 16, 40)}
             renderer={CountdownRenderer}
           />
         </Section>
