@@ -12,21 +12,29 @@ import React from "react";
 export default function ThankYou() {
   // this page renders after successful sign up
   return (
-    <Layout title="Zapisano!" content="Witamy na pokładzie!" variant="success">
+    <Layout
+      title="Dla uczestników"
+      content="Najważniejszych informacje dla uczestników zajęć"
+      variant="success"
+    >
       <Head>
-        <title>Zapisano pomyślnie!</title>
+        <title>Informacje dla zapisanych - Pogotowie Ósmoklasisty</title>
       </Head>
       <Wrapper>
         <Paragraph>
-          Zapisano pomyślnie. Jeżeli chcesz zapiać kolejnego uczestnika,{" "}
-          <Link href="/zapisz-sie">
-            <a>kliknij tutaj</a>
-          </Link>
-          . Oto kilka ważnych informacji:
+          Oto kilka najważniejszych informacji dla uczestników zajęć i ich
+          rodziców:
         </Paragraph>
         <Card>
           <Headline>Spotkanie organizacyjne: 22 marca</Headline>
           <Paragraph>Szczegóły wyślemy mailem za kilka dni</Paragraph>
+        </Card>
+        <Card>
+          <Paragraph>
+            Główną drogą komunikacji jest dla nas e-mail. Dlatego prosimy o
+            sprawdzanie skrzynki i - jeżeli maile od nas trafiają do spamu -
+            dodanie adresu <b>kontakt@pogotowie8klasisty.pl</b> do kontaktów.
+          </Paragraph>
         </Card>
         <Card>
           <Headline>Portal Ósmoklasisty</Headline>

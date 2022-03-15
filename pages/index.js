@@ -11,6 +11,8 @@ import Countdown from "react-countdown";
 import CountdownRenderer from "components/organisms/CountdownRenderer/CountdownRenderer";
 import Head from "next/head";
 import Link from "next/link";
+import { Card } from "components/atoms/Card/Card.styles";
+import { Button } from "components/atoms/Button/Button.styles";
 
 export default function index() {
   return (
@@ -36,10 +38,23 @@ export default function index() {
       <MainHeader />
       <Wrapper>
         <Section>
-          <Countdown
-            date={new Date(2022, 2, 14, 20)}
-            renderer={CountdownRenderer}
-          />
+          <Card>
+            <Headline>Zapisy na edycję 2022 zakończyły się</Headline>
+            <Paragraph>
+              Jesteśmy w trakcie weryfikowania zgłoszeń. Jeżeli zwolnią się
+              jakieś miejsca, poinformujemy o tym osoby z listy rezerwowej drogą
+              mailową.
+            </Paragraph>
+            <Paragraph>
+              Jeżeli zapisałeś(aś) się na zajęcia, kliknij poniżej, aby
+              sprawdzić najważniejsze informacje dla zapisanych
+            </Paragraph>
+            <Section>
+              <Link href="/dla-zapisanych" passHref>
+                <Button as="a">Dla zapisanych</Button>
+              </Link>
+            </Section>
+          </Card>
         </Section>
         <Section as="article">
           <Headline>O co chodzi?</Headline>
