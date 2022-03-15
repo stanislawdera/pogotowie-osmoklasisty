@@ -16,7 +16,7 @@ export default function CountdownRenderer({
   if (!completed) {
     return (
       <>
-        <Headline>Zapisy rozpoczną się</Headline>
+        <Headline>Zapisy rozpoczną się za</Headline>
 
         <BigText>
           {days} dni <MBr />
