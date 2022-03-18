@@ -33,15 +33,15 @@ export default function Harmonogram() {
           </tr>
           <tr>
             <td>29 marca 2022 r.</td>
-            <td>Zajecia nr 1. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 1. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>5 kwietnia 2022 r.</td>
-            <td>Zajecia nr 2. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 2. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>12 kwietnia 2022 r.</td>
-            <td>Zajecia nr 3. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 3. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>16, 17, 18 kwietnia 2022 r.</td>
@@ -49,19 +49,19 @@ export default function Harmonogram() {
           </tr>
           <tr>
             <td>20 kwietnia 2022 r.</td>
-            <td>Zajecia nr 4. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 4. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>26 kwietnia 2022 r.</td>
-            <td>Zajecia nr 5. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 5. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>4 maja 2022 r.</td>
-            <td>Zajecia nr 6. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 6. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>10 maja 2022 r.</td>
-            <td>Zajecia nr 7. Od 16:30 do 19:30.</td>
+            <td>Zajecia nr 7. Od 16:45 do 19:30.</td>
           </tr>
           <tr>
             <td>17 maja 2022 r.</td>
