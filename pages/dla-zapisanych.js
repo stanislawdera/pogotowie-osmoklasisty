@@ -2,6 +2,7 @@ import { Button } from "components/atoms/Button/Button.styles";
 import { Card } from "components/atoms/Card/Card.styles";
 import { Headline } from "components/atoms/Headline/Headline.styles";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph.styles";
+import { Section } from "components/atoms/Section/Section.styles";
 import { Wrapper } from "components/atoms/Wrapper/Wrapper.styles";
 import CardLink from "components/organisms/CardLink/CardLink";
 import Layout from "components/organisms/Layout/Layout";
@@ -27,7 +28,17 @@ export default function ThankYou() {
         </Paragraph>
         <Card>
           <Headline>Spotkanie organizacyjne: 22 marca</Headline>
-          <Paragraph>Szczegóły wyślemy mailem za kilka dni</Paragraph>
+          <Paragraph>
+            Spotkanie organizacyjne odbędzie się 22 marca według harmonogramu.
+          </Paragraph>
+          <Section>
+            <Link
+              href="/aktualnosci/spotkanie-organizacyjne-harmonogram"
+              passHref
+            >
+              <Button as="a">Harmonogram spotkania organizacyjnego</Button>
+            </Link>
+          </Section>
         </Card>
         <Card>
           <Paragraph>
