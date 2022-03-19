@@ -39,22 +39,23 @@ export default function index() {
       <Wrapper>
         <Section>
           <Card>
-            <Headline>Zapisy na edycję 2022 zakończyły się</Headline>
+            <Headline>Spotkanie organizacyjne</Headline>
             <Paragraph>
-              Jesteśmy w trakcie weryfikowania zgłoszeń. Jeżeli zwolnią się
-              jakieś miejsca, poinformujemy o tym osoby z listy rezerwowej drogą
-              mailową.
-            </Paragraph>
-            <Paragraph>
-              Jeżeli zapisałeś(aś) się na zajęcia, kliknij poniżej, aby
-              sprawdzić najważniejsze informacje dla zapisanych
+              Spotkanie organizacyjne odbędzie się 22 marca według harmonogramu.
             </Paragraph>
             <Section>
-              <Link href="/dla-zapisanych" passHref>
-                <Button as="a">Dla zapisanych</Button>
+              <Link
+                href="/aktualnosci/spotkanie-organizacyjne-harmonogram"
+                passHref
+              >
+                <Button as="a">Harmonogram spotkania organizacyjnego</Button>
               </Link>
             </Section>
           </Card>
+          <CardLink
+            to="/dla-zapisanych"
+            title="Zobacz Najważniejsze informacje dla uczestników"
+          />
         </Section>
         <Section as="article">
           <Headline>O co chodzi?</Headline>
