@@ -27,16 +27,11 @@ export default function ThankYou() {
           rodziców:
         </Paragraph>
         <Card>
-          <Headline>Spotkanie organizacyjne: 22 marca</Headline>
-          <Paragraph>
-            Spotkanie organizacyjne odbędzie się 22 marca według harmonogramu.
-          </Paragraph>
+          <Headline>Harmonogram zajęć</Headline>
+          <Paragraph>Informacje o terminach zajęć</Paragraph>
           <Section>
-            <Link
-              href="/aktualnosci/spotkanie-organizacyjne-harmonogram"
-              passHref
-            >
-              <Button as="a">Harmonogram spotkania organizacyjnego</Button>
+            <Link href="/harmonogram" passHref>
+              <Button as="a">Harmonogram</Button>
             </Link>
           </Section>
         </Card>
@@ -65,7 +60,6 @@ export default function ThankYou() {
             <Button as="a">Dowiedz się więcej</Button>
           </Link>
         </Card>
-        <CardLink to="/harmonogram" title="Zobacz harmonogram zajęć" />
         <CardLink
           to="mailto:kontakt@pogotowie8klasisty.pl"
           title="Masz jakieś pytania? Napisz pod adres kontakt@pogotowie8klasisty.pl"

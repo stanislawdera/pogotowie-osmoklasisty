@@ -38,23 +38,9 @@ export default function index() {
       <MainHeader />
       <Wrapper>
         <Section>
-          <Card>
-            <Headline>Spotkanie organizacyjne</Headline>
-            <Paragraph>
-              Spotkanie organizacyjne odbędzie się 22 marca według harmonogramu.
-            </Paragraph>
-            <Section>
-              <Link
-                href="/aktualnosci/spotkanie-organizacyjne-harmonogram"
-                passHref
-              >
-                <Button as="a">Harmonogram spotkania organizacyjnego</Button>
-              </Link>
-            </Section>
-          </Card>
           <CardLink
             to="/dla-zapisanych"
-            title="Zobacz Najważniejsze informacje dla uczestników"
+            title="Zobacz najważniejsze informacje dla uczestników"
           />
         </Section>
         <Section as="article">
