@@ -34,8 +34,8 @@ export default function PortalOsmoklasisty() {
         </Paragraph>
         <Paragraph>
           <b>
-            Portal Ósmoklasisty zostanie uruchomiony po pierwszych zajęciach,
-            czyli 29 marca.
+            Portal Ósmoklasisty zostanie uruchomiony w czwartek po pierwszych
+            zajęciach, czyli 31 marca o godzinie 16:00.
           </b>
         </Paragraph>
 
