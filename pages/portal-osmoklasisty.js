@@ -38,22 +38,6 @@ export default function PortalOsmoklasisty() {
             zajęciach, czyli 31 marca o godzinie 16:00.
           </b>
         </Paragraph>
-
-        <Section>
-          <Subheadline>Obejrzyj wprowadzenie</Subheadline>
-          <VideoContainer>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/aCy4ee9Py4E"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </VideoContainer>
-        </Section>
-
         <Card>
           <Headline>Jak to działa?</Headline>
           <Paragraph>
