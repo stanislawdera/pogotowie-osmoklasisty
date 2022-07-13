@@ -39,19 +39,11 @@ export default function index() {
       <Wrapper>
         <Section>
           <Card>
-            <Headline>Portal Ósmoklasisty startuje w ten czwartek</Headline>
+            <Headline>II edycja Pogotowia Ósmoklasisty dobiegła końca</Headline>
             <Paragraph>
-              31 marca o godzinie 16:00 uczestnicy zajęć dostaną maila z danymi
-              logowania.
+              O ewentualnych przyszłych edycjach poinformujemy na tej stronie.
             </Paragraph>
-            <Link href="/portal-osmoklasisty" passHref>
-              <Button as="a">Więcej informacji</Button>
-            </Link>
           </Card>
-          <CardLink
-            to="/dla-zapisanych"
-            title="Zobacz najważniejsze informacje dla uczestników"
-          />
         </Section>
         <Section as="article">
           <Headline>O co chodzi?</Headline>
